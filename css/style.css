@@ -1,153 +1,274 @@
-body,
-html {
-  height: 100%;
-  background: #110101;
-  font-family: 'Roboto', sans-serif;
-  overflow: hidden;
-}
+
 /* -----------Nav bar------------ */
 
 
 .bg-light{
-  background: transparent !important;
-  transition: 0.85s ease;
-}
-.bg-light.scrolled{
-  background:#433b88 !important;
-  box-shadow: 0px 10px 10px 0px rgba(91, 91, 91, 0.45);
-
-}
-
-.navbar {
-color: #6610f2;
-color: #3d5298;
-}
-
-/* -----------Navbar ends-------- */
-
-
-
-
-.slideshow {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-}
-.slideshow .slider {
-  width: 100vw;
-  height: 100vw;
-  z-index: 2;
-}
-.slideshow .slider * {
-  outline: none;
-}
-.slideshow .slider .item {
-  height: 100vh;
-  width: 100vw;
-  position: relative;
-  overflow: hidden;
-  border: none;
-}
-.slideshow .slider .item .text {
-  display: none;
-}
-.slideshow .slider .item img {
-  min-width: 101%;
-  min-height: 101%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-.slideshow .slick-dots {
-  position: fixed;
-  z-index: 100;
-  width: 40px;
-  height: auto;
-  bottom: auto;
-  top: 50%;
-  right: 0;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  left: auto;
-  color: #fff;
-  display: block;
-}
-.slideshow .slick-dots li {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-.slideshow .slick-dots li button {
-  position: relative;
-  width: 20px;
-  height: 15px;
-  text-align: center;
-}
-.slideshow .slick-dots li button:before {
-  content: '';
-  background: #fff;
-  color: #fff;
-  height: 2px;
-  width: 20px;
-  border-radius: 0;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  left: auto;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-  opacity: 0.6;
-}
-.slideshow .slick-dots li.slick-active button:before {
-  width: 40px;
-  opacity: 1;
-}
-.slideshow.slideshow-right {
-  left: 0;
-  z-index: 1;
-  width: 50vw;
-  pointer-events: none;
-}
-.slideshow.slideshow-right .slider {
-  left: 0;
-  position: absolute;
-}
-
-.slideshow-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  z-index: 100;
-  font-size: 80px;
-  width: 100vw;
-  text-align: center;
-  color: #fff;
-  font-family: 'Roboto Condensed', sans-serif;
-  font-weight: 100;
-  pointer-events: none;
-  text-transform: uppercase;
-  letter-spacing: 20px;
-  line-height: 0.8;
-}
-@media (max-width: 767px) {
-  .slideshow-text {
-    font-size: 40px;
+	background: transparent !important;
+	transition: 0.85s ease;
   }
+  .bg-light.scrolled{
+	background:#433b88 !important;
+	box-shadow: 0px 10px 10px 0px rgba(91, 91, 91, 0.45);
+  
+  }
+  
+  .navbar {
+  color: #6610f2;
+  color: #3d5298;
+  }
+  
+  /* -----------Navbar ends-------- */
+  
+/* --------------Menu button------- */
+*
+{
+    -webkit-tap-highlight-color: transparent;
 }
 
+*:focus
+{
+    outline: none;
+}
 
-/* Parallax Flipping Cards */
+html, body
+{
+    height: 100%;
+}
 
+body
+{
+    margin: 0;
+    background-color: #0e3577;
+}
 
+#webapp_cover
+{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    width: 39px;
+    margin: 0 auto;
+    transform: translateY(-50%) scale(2);
+}
 
-/* Parallax Flipping Cards Ends */
+#menu_button
+{
+    width: 39px;
+    overflow: hidden;
+}
+
+#menu_checkbox
+{
+    display: none;
+}
+
+#menu_label
+{
+    position: relative;
+    display: block;
+    height: 29px;
+    cursor: pointer;
+}
+
+#menu_label:before, #menu_label:after, #menu_text_bar
+{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #fff;
+}
+
+#menu_label:before, #menu_label:after
+{
+    content: '';
+    transition: 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55) left;
+}
+
+#menu_label:before
+{
+    top: 0;
+}
+
+#menu_label:after
+{
+    top: 12px;
+}
+
+#menu_text_bar
+{
+    top: 24px;
+}
+
+#menu_text_bar:before
+{
+    content: 'MENU';
+    position: absolute;
+    top: 5px;
+    right: 0;
+    left: 0;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#menu_checkbox:checked + #menu_label:before
+{
+    left: -39px;
+}
+
+#menu_checkbox:checked + #menu_label:after
+{
+    left: 39px;
+}
+
+#menu_checkbox:checked + #menu_label #menu_text_bar:before
+{
+    animation: moveUpThenDown 0.8s ease 0.2s forwards, shakeWhileMovingUp 0.8s ease 0.2s forwards, shakeWhileMovingDown 0.2s ease 0.8s forwards;
+}
+
+@keyframes moveUpThenDown
+{
+    0%{ top:0; }
+    50%{ top:-27px;}
+    100%{ top:-14px; }
+}
+
+@keyframes shakeWhileMovingUp
+{
+    0%{ transform: rotateZ(0); }
+    25%{ transform:rotateZ(-10deg); }
+    50%{ transform:rotateZ(0deg); }
+    75%{ transform:rotateZ(10deg); }
+    100%{ transform:rotateZ(0); }
+}
+
+@keyframes shakeWhileMovingDown
+{
+    0%{ transform:rotateZ(0); }
+    80%{ transform:rotateZ(3deg); }
+    90%{ transform:rotateZ(-3deg); }
+    100%{ transform:rotateZ(0); }
+}
+/* ------------Menu button ends------ */
+
+/*------------------------------- slider starts-------------------------------- */
+
+/*Downloaded from https://www.codeseek.co/digistate/horizontal-parallax-sliding-slider-with-swiperjs-aEqzBB */
+[class^="swiper-button-"] {
+	transition: all .3s ease;
+  }
+  
+  .swiper-slide {
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+  }
+  
+  *, *:before, *:after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+  }
+  
+  .swiper-container {
+	width: 80%;
+	height: 100vh;
+	float: left;
+	transition: opacity .6s ease, -webkit-transform .3s ease;
+	transition: opacity .6s ease, transform .3s ease;
+	transition: opacity .6s ease, transform .3s ease, -webkit-transform .3s ease;
+  }
+  .swiper-container.nav-slider {
+	width: 20%;
+	padding-left: 5px;
+  }
+  .swiper-container.nav-slider .swiper-slide {
+	cursor: pointer;
+	opacity: .4;
+	transition: opacity .3s ease;
+  }
+  .swiper-container.nav-slider .swiper-slide.swiper-slide-active {
+	opacity: 1;
+  }
+  .swiper-container.nav-slider .swiper-slide .content {
+	width: 100%;
+  }
+  .swiper-container.nav-slider .swiper-slide .content .title {
+	font-size: 20px;
+  }
+  .swiper-container:hover .swiper-button-prev,
+  .swiper-container:hover .swiper-button-next {
+	-webkit-transform: translateX(0);
+			transform: translateX(0);
+	opacity: 1;
+	visibility: visible;
+  }
+  .swiper-container.loading {
+	opacity: 0;
+	visibility: hidden;
+  }
+  
+  .swiper-slide {
+	overflow: hidden;
+  }
+  .swiper-slide .slide-bgimg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-position: center;
+	background-size: cover;
+  }
+  .swiper-slide .entity-img {
+	display: none;
+  }
+  .swiper-slide .content {
+	position: absolute;
+	top: 40%;
+	left: 0;
+	width: 50%;
+	padding-left: 5%;
+	color: #fff;
+  }
+  .swiper-slide .content .title {
+	font-size: 2.6em;
+	font-weight: bold;
+	margin-bottom: 30px;
+  }
+  .swiper-slide .content .caption {
+	display: block;
+	font-size: 13px;
+	line-height: 1.4;
+	-webkit-transform: translateX(50px);
+			transform: translateX(50px);
+	opacity: 0;
+	transition: opacity .3s ease, -webkit-transform .7s ease;
+	transition: opacity .3s ease, transform .7s ease;
+	transition: opacity .3s ease, transform .7s ease, -webkit-transform .7s ease;
+  }
+  .swiper-slide .content .caption.show {
+	-webkit-transform: translateX(0);
+			transform: translateX(0);
+	opacity: 1;
+  }
+  
+  [class^="swiper-button-"] {
+	width: 44px;
+	opacity: 0;
+	visibility: hidden;
+  }
+  
+  .swiper-button-prev {
+	-webkit-transform: translateX(50px);
+			transform: translateX(50px);
+  }
+  
+  .swiper-button-next {
+	-webkit-transform: translateX(-50px);
+			transform: translateX(-50px);
+  }
+  /* ---------------------------------Slider ends----------------------------------- */
