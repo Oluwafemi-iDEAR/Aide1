@@ -12,6 +12,8 @@
     .navbar .nav-item .dropdown-menu{ display: none; }
     .navbar .nav-item:hover .nav-link{ color: #fff;  }
     .navbar .nav-item:hover .dropdown-menu{ display: block; }
+    .navbar .nav-item:hover .dropdown-menu{ background-color: rgba(67, 59, 136, 0.85) !important; }
+    .navbar .nav-item:hover .dropdown-menu{ color:#fff !important; }
     .navbar .nav-item .dropdown-menu{ margin-top:0; }
     }	
     /* ============ desktop view .end// ============ */
@@ -22,7 +24,7 @@
 	transition: 0.85s ease;
   }
   .bg-light.scrolled{
-	background:#433b88 !important;
+	background:rgba(67, 59, 136, 1) !important;
 	box-shadow: 0px 10px 10px 0px rgba(91, 91, 91, 0.45);
   
   }
