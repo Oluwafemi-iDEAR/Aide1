@@ -24,7 +24,7 @@
 	transition: 0.85s ease;
   }
   .bg-light.scrolled{
-	background:rgba(67, 59, 136, 1) !important;
+	background:rgba(31, 42, 68, 1) !important;
 	box-shadow: 0px 10px 10px 0px rgba(91, 91, 91, 0.45);
   
   }
@@ -35,142 +35,43 @@
   }
   
   /* -----------Navbar ends-------- */
+/* --------------Divided Section------------ */
+@media all and (min-width: 992px) {
+.divider{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  height: 400px;
+  width: 1440px;
+  background: #f00;
+  box-shadow:0px 25px 30px rgba(0,0,0,.5);
+  display: flex;
+}
+.dividercontent{
+  width: calc(50% - 50px);
+  height: 100%;
+  background:#1f2a44;
+  box-sizing: border-box;
+  padding: 30px 50px;
+  color: #fff;
+  font-family: sans-serif;
+  line-height: 25px;
   
-/* --------------Menu button------- */
-/* *
-{
-    -webkit-tap-highlight-color: transparent;
 }
-
-*:focus
-{
-    outline: none;
+.image-box{
+     width: calc(50% + 50px);
+  height: 100%;
+  background:#da291c;
+  box-sizing: border-box;
+  border-left: 100px solid #1f2a44;
+  border-bottom: 400px solid transparent;
+  background: url(http://www.divscode.com/bootimg/pexel.jpeg);
+  background-position: -350px -59px;
+  background-repeat: no-repeat;
 }
-
-html, body
-{
-    height: 100%;
 }
-
-body
-{
-    margin: 0;
-    background-color: #0e3577;
-}
-
-#webapp_cover
-{
-    position: absolute;
-    top: 50%;
-    right: 0;
-    left: 0;
-    width: 39px;
-    margin: 0 auto;
-    transform: translateY(-50%) scale(2);
-}
-
-#menu_button
-{
-    width: 39px;
-    overflow: hidden;
-}
-
-#menu_checkbox
-{
-    display: none;
-}
-
-#menu_label
-{
-    position: relative;
-    display: block;
-    height: 29px;
-    cursor: pointer;
-}
-
-#menu_label:before, #menu_label:after, #menu_text_bar
-{
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 5px;
-    background-color: #fff;
-}
-
-#menu_label:before, #menu_label:after
-{
-    content: '';
-    transition: 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55) left;
-}
-
-#menu_label:before
-{
-    top: 0;
-}
-
-#menu_label:after
-{
-    top: 12px;
-}
-
-#menu_text_bar
-{
-    top: 24px;
-}
-
-#menu_text_bar:before
-{
-    content: 'MENU';
-    position: absolute;
-    top: 5px;
-    right: 0;
-    left: 0;
-    color: #fff;
-    font-size: 12px;
-    font-weight: bold;
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    text-align: center;
-}
-
-#menu_checkbox:checked + #menu_label:before
-{
-    left: -39px;
-}
-
-#menu_checkbox:checked + #menu_label:after
-{
-    left: 39px;
-}
-
-#menu_checkbox:checked + #menu_label #menu_text_bar:before
-{
-    animation: moveUpThenDown 0.8s ease 0.2s forwards, shakeWhileMovingUp 0.8s ease 0.2s forwards, shakeWhileMovingDown 0.2s ease 0.8s forwards;
-}
-
-@keyframes moveUpThenDown
-{
-    0%{ top:0; }
-    50%{ top:-27px;}
-    100%{ top:-14px; }
-}
-
-@keyframes shakeWhileMovingUp
-{
-    0%{ transform: rotateZ(0); }
-    25%{ transform:rotateZ(-10deg); }
-    50%{ transform:rotateZ(0deg); }
-    75%{ transform:rotateZ(10deg); }
-    100%{ transform:rotateZ(0); }
-}
-
-@keyframes shakeWhileMovingDown
-{
-    0%{ transform:rotateZ(0); }
-    80%{ transform:rotateZ(3deg); }
-    90%{ transform:rotateZ(-3deg); }
-    100%{ transform:rotateZ(0); }
-} */
-/* ------------Menu button ends------ */
+/* ------------Section divider------ */
 
 /*------------------------------- slider starts-------------------------------- */
 
@@ -290,6 +191,321 @@ body
   }
   /* ---------------------------------Slider ends----------------------------------- */
 
-  /* -------------------------------section divider--------------------------------------- */
+  /* --------------------------------Slider button---------------------------------- */
+
+  .btn {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 900; 
+    background-color: #FFF; 
+    color: black; 
+    border: 2px solid #496199; 
+  }
+    .btn:hover, .btn:active, .btn:focus {
+      outline: none;
+      -webkit-box-shadow: none !important;
+      box-shadow: none !important;
+      border-color: #ff0000;
+      color: #000; 
+    } 
+    
+    /* .btn.btn-black {
+      border-width: 2px;
+      border-color: #000;
+      background: #000;
+      color: #fff; }
+      .btn.btn-black:hover {
+        color: #000;
+        background-color: transparent; }
+      .btn.btn-black.btn-outline-black {
+        color: #000;
+        background-color: transparent; }
+        .btn.btn-black.btn-outline-black:hover {
+          border-color: #000;
+          background: #000;
+          color: #fff; }
+    .btn.btn-white {
+      border-width: 2px;
+      border-color: #fff;
+      background: #ff0000 !important;
+      color: #000; }
+    .btn.btn-white:hover {
+      color: #fff;
+      background-color: transparent; }
+    .btn.btn-white.btn-outline-light {
+        color: #fff;
+        background-color: transparent; }
+    .btn.btn-white.btn-outline-light:hover {
+        border-color: #fff;
+        background: #ff0000 !important;
+        color: #000; } */
   
-  /* ------------------------------section divider----------------------------------- */
+  /* -------------------------------Slider button ends--------------------------------- */
+
+
+/* -------------------------------------Team------------------------------------------ */
+#team {
+  background: #eee !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #108d6f;
+  border-color: #108d6f;
+  box-shadow: none;
+  outline: none;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #007b5e;
+  border-color: #007b5e;
+}
+
+section {
+  padding: 60px 0;
+}
+
+section .section-title {
+  text-align: center;
+  color: #007b5e;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+
+#team .card {
+  border: none;
+  background: #ffffff;
+}
+
+.image-flip:hover .backside,
+.image-flip.hover .backside {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  border-radius: .25rem;
+}
+
+.image-flip:hover .frontside,
+.image-flip.hover .frontside {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.mainflip {
+  -webkit-transition: 1s;
+  -webkit-transform-style: preserve-3d;
+  -ms-transition: 1s;
+  -moz-transition: 1s;
+  -moz-transform: perspective(1000px);
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transition: 1s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.frontside {
+  position: relative;
+  -webkit-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  z-index: 2;
+  margin-bottom: 30px;
+}
+
+.backside {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: white;
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+  -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+  box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+}
+
+.frontside,
+.backside {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: 1s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transition: 1s;
+  -moz-transform-style: preserve-3d;
+  -o-transition: 1s;
+  -o-transform-style: preserve-3d;
+  -ms-transition: 1s;
+  -ms-transform-style: preserve-3d;
+  transition: 1s;
+  transform-style: preserve-3d;
+}
+
+.frontside .card,
+.backside .card {
+  min-height: 312px;
+}
+
+.backside .card a {
+  font-size: 18px;
+  color: #007b5e !important;
+}
+
+.frontside .card .card-title,
+.backside .card .card-title {
+  color: #007b5e !important;
+}
+
+.frontside .card .card-body img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+/* -----------------------------------Team ends--------------------------------------- */
+  /* -------------------------------Insights--------------------------------------- */
+  
+.cta-100 {
+  margin-top: 100px;
+  padding-left: 8%;
+  padding-top: 7%;
+}
+.col-md-4{
+    padding-bottom:20px;
+}
+
+.white {
+  color: #fff !important;
+}
+.mt{float: left;margin-top: -20px;padding-top: 20px;}
+.bg-blue-ui {
+  background-color: #708198 !important;
+}
+figure img{width:300px;}
+
+#blogCarousel {
+  padding-bottom: 100px;
+}
+
+.blog .carousel-indicators {
+  left: 0;
+  top: -50px;
+  height: 50%;
+}
+
+
+/* The colour of the indicators */
+
+.blog .carousel-indicators li {
+  background: #708198;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+}
+
+.blog .carousel-indicators .active {
+  background: #0fc9af;
+}
+
+
+
+
+.item-carousel-blog-block {
+  outline: medium none;
+  padding: 15px;
+}
+
+.item-box-blog {
+  border: 1px solid #dadada;
+  text-align: center;
+  z-index: 4;
+  padding: 20px;
+}
+
+.item-box-blog-image {
+  position: relative;
+}
+
+.item-box-blog-image figure img {
+  width: 100%;
+  height: auto;
+}
+
+.item-box-blog-date {
+  position: absolute;
+  z-index: 5;
+  padding: 4px 20px;
+  top: -20px;
+  right: 8px;
+  background-color: #41cb52;
+}
+
+.item-box-blog-date span {
+  color: #fff;
+  display: block;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.item-box-blog-date span.mon {
+  font-size: 18px;
+}
+
+.item-box-blog-date span.day {
+  font-size: 16px;
+}
+
+.item-box-blog-body {
+  padding: 10px;
+}
+
+.item-heading-blog a h5 {
+  margin: 0;
+  line-height: 1;
+  text-decoration:none;
+  transition: color 0.3s;
+}
+
+.item-box-blog-heading a {
+    text-decoration: none;
+}
+
+.item-box-blog-data p {
+  font-size: 13px;
+}
+
+.item-box-blog-data p i {
+  font-size: 12px;
+}
+
+.item-box-blog-text {
+  max-height: 100px;
+  overflow: hidden;
+}
+
+.mt-10 {
+  float: left;
+  margin-top: -10px;
+  padding-top: 10px;
+}
+
+.btn.bg-blue-ui.white.read {
+  cursor: pointer;
+  padding: 4px 20px;
+  float: left;
+  margin-top: 10px;
+}
+
+.btn.bg-blue-ui.white.read:hover {
+  box-shadow: 0px 5px 15px inset #4d5f77;
+}
+
+  /* ------------------------------Insights ends----------------------------------- */
